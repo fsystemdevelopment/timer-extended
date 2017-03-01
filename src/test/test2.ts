@@ -1,15 +1,15 @@
-import { setTimeout } from "../lib/index";
+import { setTimeout as setTimeoutExt } from "../lib/index";
 
 
 require("colors");
 
 let message: string | undefined= undefined;
 
-let timer= setTimeout((str: string)=> { message= str; return "good"; }, 0, "ok");
+let timer= setTimeoutExt((str: string)=> { message= str; return "good"; }, 0, "ok");
 
 console.assert(timer.hasExec===false);
 
-setImmediate(()=> {
+setTimeout(()=> {
 
     console.assert(message === "ok");
 
@@ -20,4 +20,4 @@ setImmediate(()=> {
 
     console.log("PASS".green);
 
-});
+},100);

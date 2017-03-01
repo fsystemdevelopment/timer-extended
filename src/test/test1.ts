@@ -11,7 +11,7 @@ console.assert(timer.hasBeenCleared===false);
 console.assert(timer.hasExec===false);
 
 console.assert(timer.runNow()==="ok");
-console.log(timer.hasBeenCleared===true);
+console.assert(timer.hasBeenCleared===true);
 
 console.assert(timer.hasBeenCleared===true);
 console.assert(timer.hasExec===true);
