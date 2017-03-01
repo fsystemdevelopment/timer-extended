@@ -26,14 +26,14 @@ export class Timer<T> {
 
     }
 
-    public runNow(): T{
+    public runNow(...args: any[]): T{
 
         if( this.hasExec ) throw new Error("Timer has exec already");
         if( this.hasBeenCleared ) throw new Error("Timer has been cleared");
 
         this.clear();
 
-        this._returnValue = [this.callback.apply(null, this.args)];
+        this._returnValue = [this.callback.apply(null, (args.length)?args:this.args)];
 
         return this._returnValue[0];
 
