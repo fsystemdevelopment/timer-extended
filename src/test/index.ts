@@ -8,7 +8,11 @@ if (n) {
 
 } else {
 
-    for (let i = 1; i <= 5; i++) {
+    let n = 6;
+
+    console.log(`Running ${n} tests`);
+
+    for (let i = 1; i <= n; i++) {
 
         try {
             require("./test" + i);

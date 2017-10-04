@@ -1,12 +1,11 @@
-import { setTimeout as setTimeoutExt } from "../lib/index";
+import { setTimer } from "../lib";
 
 
 require("colors");
 
 let message: string | undefined= undefined;
 
-let timer= setTimeoutExt((str1: string, str2:string)=> { message= str1+str2; }, 1000, "o", "k");
-
+let timer= setTimer((str1: string, str2:string)=> { message= str1+str2; }, 1000, "o", "k");
 
 let window= 100;
 
@@ -17,7 +16,7 @@ setTimeout(()=> {
 
     let expectRemindingMs= 500;
 
-    console.log(timer.remindingMs, expectRemindingMs);
+    //console.log(timer.remindingMs, expectRemindingMs);
     console.assert( expectRemindingMs - window < timer.remindingMs );
     console.assert( timer.remindingMs < expectRemindingMs + window);
 
@@ -26,7 +25,7 @@ setTimeout(()=> {
 
     expectRemindingMs= 1000;
 
-    console.log(timer.remindingMs, expectRemindingMs);
+    //console.log(timer.remindingMs, expectRemindingMs);
     console.assert( expectRemindingMs - window < timer.remindingMs );
     console.assert( timer.remindingMs < expectRemindingMs + window);
 
@@ -41,7 +40,7 @@ setTimeout(()=> {
 
     let expectRemindingMs= 300;
 
-    console.log(timer.remindingMs, expectRemindingMs);
+    //console.log(timer.remindingMs, expectRemindingMs);
     console.assert( expectRemindingMs - window < timer.remindingMs );
     console.assert( timer.remindingMs < expectRemindingMs + window);
 
@@ -56,7 +55,7 @@ setTimeout(()=> {
 
     let expectRemindingMs= -100;
 
-    console.log(timer.remindingMs, expectRemindingMs);
+    //console.log(timer.remindingMs, expectRemindingMs);
     console.assert( expectRemindingMs - window < timer.remindingMs );
     console.assert( timer.remindingMs < expectRemindingMs + window);
 

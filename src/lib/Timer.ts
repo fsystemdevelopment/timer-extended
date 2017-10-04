@@ -72,7 +72,11 @@ export class Timer<T> {
 
 }
 
-export function setTimeoutExt<T>(callback: (...inputs: any[]) => T, ms: number, ...args: any[]): Timer<T> {
+export function setTimer<T>(
+    callback: (...inputs: any[]) => T,
+    ms: number,
+    ...args: any[]
+): Timer<T> {
 
     return new Timer(callback, ms, args);
 

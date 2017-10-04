@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Timer = (function () {
+var Timer = /** @class */ (function () {
     function Timer(callback, ms, args) {
         var _this = this;
         this.callback = callback;
@@ -67,12 +67,11 @@ var Timer = (function () {
     return Timer;
 }());
 exports.Timer = Timer;
-function setTimeoutExt(callback, ms) {
+function setTimer(callback, ms) {
     var args = [];
     for (var _i = 2; _i < arguments.length; _i++) {
         args[_i - 2] = arguments[_i];
     }
     return new Timer(callback, ms, args);
 }
-exports.setTimeoutExt = setTimeoutExt;
-//# sourceMappingURL=Timer.js.map
+exports.setTimer = setTimer;

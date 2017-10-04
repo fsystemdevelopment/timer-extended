@@ -1,6 +1,6 @@
 {
   "name": "timer-extended",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Feature runNow",
   "repository": {
     "type": "git",
@@ -10,16 +10,17 @@
   "types": "./dist/lib/index.d.ts",
   "scripts": {
     "tsc": "./node_modules/.bin/tsc -p ./tsconfig.json",
+    "tsc-w": "node ./node_modules/typescript/bin/tsc -w -p ./tsconfig.json",
     "test": "node ./dist/test/index"
   },
   "author": "Joseph Garrone",
   "license": "MIT",
-  "dependencies": { },
+  "dependencies": {},
   "devDependencies": {
-    "ts-events-extended": "garronej/ts-events-extended",
-    "typescript": "^2.1.4",
-    "colors": "^1.1.2",
+    "@types/colors": "^1.1.1",
     "@types/node": "^4.0.0",
-    "@types/colors": "^1.1.1"
+    "colors": "^1.1.2",
+    "ts-events-extended": "garronej/ts-events-extended",
+    "typescript": "^2.5.3"
   }
 }

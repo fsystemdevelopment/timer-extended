@@ -1,10 +1,8 @@
-import { setTimeout } from "../lib/index";
-
+import { setTimer } from "../lib";
 
 require("colors");
 
-
-let timer= setTimeout((str: string)=> { return str; }, 1000, "ok");
+let timer= setTimer((str: string)=> { return str; }, 1000, "ok");
 
 
 console.assert(timer.hasBeenCleared===false);

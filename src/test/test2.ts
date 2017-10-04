@@ -1,11 +1,10 @@
-import { setTimeout as setTimeoutExt } from "../lib/index";
-
+import { setTimer } from "../lib";
 
 require("colors");
 
 let message: string | undefined= undefined;
 
-let timer= setTimeoutExt((str: string)=> { message= str; return "good"; }, 0, "ok");
+let timer= setTimer((str: string)=> { message= str; return "good"; }, 0, "ok");
 
 console.assert(timer.hasExec===false);
 
