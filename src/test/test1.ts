@@ -1,7 +1,5 @@
 import { setTimer } from "../lib";
 
-require("colors");
-
 let timer= setTimer((str: string)=> { return str; }, 1000, "ok");
 
 
@@ -14,4 +12,4 @@ console.assert(timer.hasBeenCleared===true);
 console.assert(timer.hasBeenCleared===true);
 console.assert(timer.hasExec===true);
 
-console.log("PASS".green);
+console.log("PASS 1");

@@ -1,7 +1,5 @@
 import { Timers } from "../lib";
 
-require("colors");
-
 let timers= new Timers();
 
 let success= 0;
@@ -46,6 +44,6 @@ setTimeout(()=> {
 
     console.assert(success === 4 , "m10");
 
-    console.log("PASS".green);
+    console.log("PASS 6".green);
 
 }, 2000);

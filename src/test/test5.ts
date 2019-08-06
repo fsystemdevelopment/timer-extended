@@ -1,8 +1,5 @@
 import { setTimer } from "../lib";
 
-
-require("colors");
-
 let message: string | undefined= undefined;
 
 let timer= setTimer((str1: string, str2:string)=> { message= str1+str2; }, 1000, "o", "k");
@@ -65,7 +62,7 @@ setTimeout(()=> {
 
     console.assert(message === "ok");
 
-    console.log("PASS".green);
+    console.log("PASS 5".green);
 
 }, 1600); 
 

@@ -1,4 +1,4 @@
-require("colors");
+import("colors");
 
 let n = process.argv[2];
 
