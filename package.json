@@ -1,10 +1,10 @@
 {
-  "name": "timer-extended",
+  "name": "timer-extended-bccp",
   "version": "0.4.0",
   "description": "Feature runNow",
   "repository": {
     "type": "git",
-    "url": "git://github.com/garronej/ts-exec-stack.git"
+    "url": "git://github.com/fsystemdevelopment/ts-exec-stack.git"
   },
   "main": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
@@ -13,7 +13,7 @@
     "tsc-w": "node ./node_modules/typescript/bin/tsc -w -p ./tsconfig.json",
     "test": "node ./dist/test/index"
   },
-  "author": "Joseph Garrone",
+  "author": "Bccp",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
